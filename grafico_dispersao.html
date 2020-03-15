@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+<html lang = "pt-br">
+<head>
+	<title>GRAFICO</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css" />
+	<link href="css/style.css" rel="stylesheet"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+ 
+  <style>
+    /* Set height of the grid so .sidenav can be 100% (adjust if needed) */
+    .row.content {height: 1500px}
+    
+    /* Set gray background color and 100% height */
+    .sidenav {
+      background-color: #f1f1f1;
+      height: 100%;
+    }
+    
+    /* Set black background color, white text and some padding */
+    footer {
+      background-color: #555;
+      color: white;
+      padding: 15px;
+    }
+    
+    /* On small screens, set height to 'auto' for sidenav and grid */
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding: 15px;
+      }
+      .row.content {height: auto;} 
+    }
+  </style>
+</head>
+<body>
+
+	<div class="container-fluid">
+	  <div class="row content">
+	    <div class="col-sm-3 sidenav">	
+	      <h4>Ativar</h4>
+	      <div class="form-check">
+			<input class="form-check-input" type="checkbox" value="Asia" name="pacote" onClick="getChecked1()" id="defaultCheck1">
+			<label class="form-check-label" for="defaultCheck1">Ásia</label>
+		  </div>
+		  <div class="form-check">
+			<input class="form-check-input" type="checkbox" value="Europa" name="pacote" onClick="getChecked2()" id="defaultCheck2">
+			<label class="form-check-label" for="defaultCheck2">Europa</label>
+		  </div>
+		  <div class="form-check">
+			<input class="form-check-input" type="checkbox" value="EUA" name="pacote" onClick="getChecked3()" id="defaultCheck3">
+			<label class="form-check-label" for="defaultCheck3">EUA</label>
+		  </div>
+		  <br>
+	    </div>
+
+	    <div class="col-sm-9">
+	      <h4><small>Gráfico de Dispersão</small></h4>
+	      <hr>
+	      <h2>Consumo x Potência</h2>
+	      <h5> Legenda</h5>
+	      <h5><span class="label label-danger">Ásia</span> <span class="label label-success">Europa</span> <span class="label label-primary">EUA</span></h5><br>
+	      <br><br>
+	      <div class="container">
+	    		<div class="row">
+	        		<div class="col-xs-6">
+						<canvas id="tela" width="600" height="400"></canvas> 
+	                </div>                        
+	    		</div>
+		   </div>
+		</div>
+      </div>
+    </div>
+
+<footer class="container-fluid">
+  <meta charset="utf-8"/>
+		<script src="js/jquery.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script language="javascript" src="js/script.js"></script>
+</footer>
+
+</body>
+</html>
